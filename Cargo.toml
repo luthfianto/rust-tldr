@@ -1,10 +1,15 @@
 [package]
 name = "tldr"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Rizky Luthfianto <mrluthfianto@gmail.com>"]
-description = "Rust client for tldr. tldr is a simplified and community-driven man pages"
+description = "tldr is a simplified and community-driven man pages"
 license = "MIT"
+repository = "http://github.com/rilut/rust-tldr"
 
 [dependencies]
-hyper = '>= 0.7.1'
 ansi_term = ">= 0.7"
+
+[dependencies.hyper]
+version = '>= 0.7.1'
+default-features = false
+features = ['openssl']
