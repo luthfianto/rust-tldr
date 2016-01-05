@@ -22,7 +22,7 @@ fn main() {
     if args.len() < 2 {
         let error = "Specify an argument!";
         println!("{}", format!("{error} \nExample: \n$ tldr ls", error = Red.paint(error).to_string()));
-        return;
+        process::exit(1);
     }
 
     let common_url = format!("https://raw.github.com/tldr-pages/tldr/master/pages/common/{page}.md", page = args[1]);
