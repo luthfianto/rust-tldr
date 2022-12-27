@@ -17,8 +17,8 @@ const PLATFORM: &'static str = "osx";
 const PLATFORM: &'static str = "linux";
 
 fn fetch_from_internet(command: &str) -> String {
-    let common_url = format!("https://raw.github.com/tldr-pages/tldr/master/pages/common/{page}.md", page = command);
-    let platform_url = format!("https://raw.github.com/tldr-pages/tldr/master/pages/{platform}/{page}.md", page = command, platform=PLATFORM);
+    let common_url = format!("https://raw.github.com/tldr-pages/tldr/main/pages/common/{page}.md", page = command);
+    let platform_url = format!("https://raw.github.com/tldr-pages/tldr/main/pages/{platform}/{page}.md", page = command, platform=PLATFORM);
 
     let client = Client::new();
 
